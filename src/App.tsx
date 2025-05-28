@@ -102,9 +102,7 @@ function handleProductAddButtonClick({
 }
 
 function ProductAddButton({
-  productList,
 }: {
-  productList: Array<Products>;
 }) {
   const [opened, {open, close}] = useDisclosure(false);
 
@@ -153,7 +151,7 @@ function App() {
     <Container size="xs" px="md" mt={40}>
       <Stack gap="md">
         <FilterableProductTable products={productList} />
-        <ProductAddButton productList={productList} />
+        <ProductAddButton />
       </Stack>
     </Container>
   );
